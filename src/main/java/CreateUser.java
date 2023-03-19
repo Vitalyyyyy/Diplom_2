@@ -9,6 +9,11 @@ public class CreateUser {
         this.password = password;
         this.name = name;
     }
+    public CreateUser(String email, String password) {
+        this.email = email;
+        this.password = password;
+
+    }
 
     public CreateUser() {
     }

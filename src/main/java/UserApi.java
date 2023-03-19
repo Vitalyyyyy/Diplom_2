@@ -43,7 +43,7 @@ public class UserApi {
         return accessTokenBearer.getAccessToken().substring(7);
     }
 
-    public Response loginUser(User user) {
+    public Response loginUser(CreateUser user) {
         Response response =
                 given()
                         .auth().oauth2(getToken())

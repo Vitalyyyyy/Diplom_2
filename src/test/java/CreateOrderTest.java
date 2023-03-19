@@ -10,6 +10,8 @@ public class CreateOrderTest extends BaseApi {
     UserApi userApi = new UserApi();
     OrderApi orderApi = new OrderApi();
     AssertOrder orderAssert = new AssertOrder();
+    
+
 
     @Before
     public void setUp() {
@@ -62,6 +64,7 @@ public class CreateOrderTest extends BaseApi {
 
     @After
     public void deleteUser() {
+
         userApi.deleteUser();
     }
 }

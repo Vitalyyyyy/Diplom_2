@@ -12,9 +12,9 @@ public class GeneratorUser {
     static CreateUser createUserWithoutEmail = new CreateUser("", passwordFaker, userNameFaker);
     static CreateUser createUserWithoutPassword = new CreateUser(emailFaker, "", userNameFaker);
     static CreateUser createUserWithoutUserName = new CreateUser(emailFaker, passwordFaker, "");
-    static User user = new User(emailFaker, passwordFaker);
-    static User userBadEmail = new User(emailFaker.substring(1), passwordFaker);
-    static User userBadPassword = new User(emailFaker, passwordFaker.substring(1));
+    static CreateUser user = new CreateUser(emailFaker, passwordFaker);
+    static CreateUser userBadEmail = new CreateUser(emailFaker.substring(1), passwordFaker);
+    static CreateUser userBadPassword = new CreateUser(emailFaker, passwordFaker.substring(1));
 
     public static String getNewEmail() {
 
@@ -41,15 +41,15 @@ public class GeneratorUser {
         return createUserWithoutUserName;
     }
 
-    public static User getUser() {
+    public static CreateUser getUser() {
         return user;
     }
 
-    public static User getUserBadEmail() {
+    public static CreateUser getUserBadEmail() {
         return userBadEmail;
     }
 
-    public static User getUserBadPassword() {
+    public static CreateUser getUserBadPassword() {
         return userBadPassword;
     }
 
